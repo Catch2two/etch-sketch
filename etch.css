@@ -1,0 +1,23 @@
+/* :root edits whole html*/
+:root {
+    background-color: black;
+    color: white;
+    --grid-columns: 1;
+    --grid-rows:    1;
+}
+
+/* Place the grid within the container using CSS Grid*/
+#container {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    border: 1px solid white;
+}
+
+/* item within the grid*/
+.grid-item {
+    padding: 1em;
+    border: 1px solid white;
+    text-align: center;
+}
