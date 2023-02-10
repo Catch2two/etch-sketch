@@ -1,9 +1,26 @@
 /* :root edits whole html*/
 :root {
-    background-color: black;
-    color: white;
+
     --grid-columns: 1;
     --grid-rows:    1;
+}
+h1 {
+    text-align: center;
+}
+
+
+button {
+    color: aliceblue;
+    background-color: rgb(56, 56, 56);
+    border: 2px solid red;
+    height: 25;
+    border-radius: 10px;
+    font-weight: bolder;
+    margin: 20px auto;
+}
+button:hover {
+    background-color: white;
+    transition: 1s linear;
 }
 
 /* Place the grid within the container using CSS Grid*/
@@ -12,12 +29,17 @@
     grid-gap: 1em;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-columns), 1fr);
-    border: 1px solid white;
+    border: 1px solid black;
 }
 
 /* item within the grid*/
 .grid-item {
     padding: 1em;
-    border: 1px solid white;
+    border: 1px solid black;
     text-align: center;
 }
+/*
+div.grid-item:hover{
+    background-color: rgb(23, 24, 24);
+    transition: 0.5s linear;
+}*/
