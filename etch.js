@@ -1,10 +1,12 @@
 function createBoard(size) {
     let board = document.querySelector(".board");
-//This will make 16 Columns(andRows) w/ width of 16
+    let squares = board.querySelectorAll("div");
+    //This will make 16 Columns(andRows) w/ width of 16
     board.style.gridTemplateColumns = `repeat(${size} , 1fr)`
     board.style.gridTemplateRows = `repeat(${size} , 1fr)`
 
-    for (let i = 0; i < 256; i++) {
+    let amount = size * size
+    for (let i = 0; i < amount; i++) {
      let square = document.createElement("div");
      square.style.backgroundColor = "blue";
      board.insertAdjacentElement("beforeEnd" , square);
@@ -13,5 +15,9 @@ function createBoard(size) {
 createBoard(16);
 
 function changeSize(input){
-    populateBoard(input);
+  if(input >= 2 && input <= 100) {
+    createBoard(input);
+} else {
+  console.log("Please select a number between 2 and 100.");
+ }
 }
