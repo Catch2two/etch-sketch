@@ -2,6 +2,8 @@
 let color = 'black';
 let click = true;
 
+
+//Create the Board (grids)
 function createBoard(size) {
     let board = document.querySelector(".board");
     let squares = board.querySelectorAll("div");
@@ -19,6 +21,7 @@ function createBoard(size) {
 
 createBoard(16);
 
+//The input element for the size of the board (2-100 only)
 function changeSize(input){
   if(input >= 2 && input <= 100) {
     createBoard(input);
@@ -37,11 +40,11 @@ function colorSquare() {
     this.style.backgroundColor = color;
   }
 }}
-
+//Change color based on the choice of Button selected
 function changeColor(choice) {
     color = choice;
 }
-
+// Clear the Board
 function resetBoard() {
     let board = document.querySelector(".board");
     let squares = board.querySelectorAll("div");
