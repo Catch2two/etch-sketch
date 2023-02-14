@@ -1,3 +1,6 @@
+//global variables
+let color = 'black';
+
 function createBoard(size) {
     let board = document.querySelector(".board");
     let squares = board.querySelectorAll("div");
@@ -8,9 +11,7 @@ function createBoard(size) {
     let amount = size * size
     for (let i = 0; i < amount; i++) {
      let square = document.createElement("div");
-     square.addEventListener("mousemove", (colorSquare) => {
-        square.style.backgroundColor = "black"
-    });
+     square.addEventListener("mousemove", colorSquare);
      square.style.backgroundColor = "grey";
      board.insertAdjacentElement("beforeEnd" , square);
 }}
@@ -26,6 +27,10 @@ function changeSize(input){
 }
 
 // Refer to any square we currently calling that function with.
-function colorSquare(color) {
-    this.style.backgroundColor = "black"
+function colorSquare() {
+    this.style.backgroundColor = color;
+}
+
+function changeColor(choice) {
+    color = choice;
 }
