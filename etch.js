@@ -8,7 +8,7 @@ function createBoard(size) {
     let amount = size * size
     for (let i = 0; i < amount; i++) {
      let square = document.createElement("div");
-     square.addEventListener("mousemove", () => {
+     square.addEventListener("mousemove", (colorSquare) => {
         square.style.backgroundColor = "black"
     });
      square.style.backgroundColor = "grey";
@@ -23,4 +23,9 @@ function changeSize(input){
 } else {
   console.log("Please select a number between 2 and 100.");
  }
+}
+
+// Refer to any square we currently calling that function with.
+function colorSquare(color) {
+    this.style.backgroundColor = "black"
 }
