@@ -11,3 +11,7 @@ function createBoard(size) {
 }}
 
 createBoard(16);
+
+function changeSize(input){
+    populateBoard(input);
+}
