@@ -1,6 +1,6 @@
 /* link to div id 'container' */
 const container = document.getElementById('container');
-let resetButton = document.querySelector("resetButton");
+const resetButton = document.querySelector("resetButton");
 
 /* create rows and columns function*/
 function makeRows (rows, columns) {
@@ -15,7 +15,9 @@ function makeRows (rows, columns) {
         /* visually add makeRows to the page*/
         container.appendChild(cell).className = "grid-item";
         //console.log(makeRows);
+        
 };
+
 
 
 }

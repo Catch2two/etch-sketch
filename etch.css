@@ -1,13 +1,17 @@
 /* :root edits whole html*/
 :root {
-
     --grid-columns: 1;
     --grid-rows:    1;
 }
 h1 {
+    color: rgb(255, 255, 255);
     text-align: center;
+    background-color: rgb(240, 46, 32);
 }
-
+#centerButton {
+    text-align: center;
+    background-color: red;;
+}
 
 button {
     color: aliceblue;
@@ -18,13 +22,10 @@ button {
     font-weight: bolder;
     margin: 20px auto;
 }
-button:hover {
-    background-color: white;
-    transition: 1s linear;
-}
 
 /* Place the grid within the container using CSS Grid*/
 #container {
+    background-color: rgb(206, 206, 206);
     display: grid;
     grid-gap: 1em;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
@@ -34,12 +35,14 @@ button:hover {
 
 /* item within the grid*/
 .grid-item {
-    padding: 1em;
-    border: 1px solid black;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #ddd;
     text-align: center;
+    transition: ease 3s all;
 }
-/*
+
 div.grid-item:hover{
     background-color: rgb(23, 24, 24);
-    transition: 0.5s linear;
-}*/
+    transition: ease 0.5s all;
+}
