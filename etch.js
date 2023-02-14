@@ -1,5 +1,6 @@
 //global variables
 let color = 'black';
+let click = true;
 
 function createBoard(size) {
     let board = document.querySelector(".board");
@@ -29,12 +30,13 @@ function changeSize(input){
 // Refer to any square we currently calling that function with.
 // make sure to add === so it wont always be random color
 function colorSquare() {
+   if (click) { 
     if(color === 'random') {
         this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
   } else {
     this.style.backgroundColor = color;
   }
-}
+}}
 
 function changeColor(choice) {
     color = choice;
@@ -45,3 +47,7 @@ function resetBoard() {
     let squares = board.querySelectorAll("div");
     squares.forEach((div) => div.style.backgroundColor = 'Gray');
 }
+
+document.querySelector('body').addEventListener("click", () => {
+    click = !click;
+});
