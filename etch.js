@@ -47,7 +47,11 @@ function resetBoard() {
     let squares = board.querySelectorAll("div");
     squares.forEach((div) => div.style.backgroundColor = 'Gray');
 }
-
+//if click is true, set it to false. If click is false, set it to true
 document.querySelector('body').addEventListener("click", () => {
     click = !click;
+    if (click) {
+        document.querySelector('.mode').textContent = 'Mode: Coloring'
+  } else
+        document.querySelector('.mode').textContent = 'Mode: Not Coloring'
 });
